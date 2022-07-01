@@ -1,9 +1,14 @@
 deployment:
   flask:
+    name: flask-deployment
+    selectorApp: flask-pod
     replicaCount: 1
     image:
       repository: coder336/flask-blog-app
       tag: latest
+    pullPolicy: IfNotPresent
+    port: 5000
+    
 service:
   flask-service:
     type: LoadBalancer
