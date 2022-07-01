@@ -1,20 +1,13 @@
-namespace: flask-blog-app
-
 deployment:
-  redis:
-    replicaCount: 1
-    port: 6379
   flask:
     replicaCount: 1
     image:
       repository: coder336/flask-blog-app
       tag: latest
-    health_path: /health
-  
-secrets:
-  username:
-    key: USERNAME
-  password:
-    key: PASSWORD
-  thebigsecret:
-    key: THEBIGSECRET
+service:
+  flask-service:
+    type: LoadBalancer
+    protocol: TCP
+    port: 8080
+    targetPort: 5000
+    selectorApp: flask-pod
