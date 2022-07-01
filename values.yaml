@@ -9,6 +9,7 @@ deployment:
   port: 5000
     
 service:
+  name: flask-service
   type: LoadBalancer
   protocol: TCP
   port: 8080
