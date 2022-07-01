@@ -3,6 +3,7 @@ deployment:
   selectorApp: flask-pod
   replicaCount: 1
   image:
+    name: flask-container
     repository: coder336/flask-blog-app
     tag: latest
   pullPolicy: IfNotPresent
