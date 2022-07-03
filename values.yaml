@@ -5,7 +5,7 @@ deployment:
   image:
     name: flask-container
     repository: coder336/flask-blog-app
-    tag: f0a7282bc46cac72c03b346546b2b5de74c809ea
+    tag: 3bc62079e61d1043ec5a98e2e3bb30fa33709fbb
   pullPolicy: IfNotPresent
   port: 5000
 service:
